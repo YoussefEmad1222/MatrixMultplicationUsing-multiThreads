@@ -1,6 +1,5 @@
 # MatrixMultplicationUsing-multiThreads
-
-
+this program how to make user level threads and understands the pros and cons of using threads  
 ## main ():
 The main function of the code is this. It requires the filenames of the input files for matrices A, B, and 
 C as its 4 command-line arguments. The read inputFile() function is used to read the matrices from the input 
@@ -9,3 +8,18 @@ used to write the output matrices to different output files
 
 ## read_inputFile (char *filename, int flag):
 The input file's filename and a flag are the two parameters that this function requires (1 for matrix A and 2 for matrix B). The matrix is stored in a 2D array after being received from the specified input file. Also, based on the matrix's dimensions, it decides the values of the global variables n, m, and k. The function prints an error notice and ends the program if the dimensions of the two matrices are incompatible for multiplication.
+
+##  write_output_file (char *filename, int num):
+The filename of the output file and a number indicating the multiplication method used are the two parameters this function accepts (1 for matrix method, 2 for row method, and 3 for element method). It saves the generated matrix to the output file that has been provided
+
+## matrixMultiplication ():
+Using the matrix approach, this function multiplies matrices. Each element is calculated by multiplying the corresponding row of matrix A with the corresponding column of matrix B as it goes through the rows and columns of the resulting matrix C. The resulting value is kept in the appropriate matrix C element.
+
+## void *matrixMultiByRow (void *args_row): 
+The row approach is used by this function to multiply matrices. The function only requires one parameter, a pointer to a struct args_row that contains the row number of matrix C that needs to be calculated. By multiplying the appropriate row from matrix A with the corresponding column from matrix B, it determines each element of the specified row. The resulting value is kept in the C matrix's corresponding element
+
+## void *matrixMultipyByElement (void *args_element): 
+Using the element approach, this function multiplies matrices. The function only requires a single parameter, a pointer to a struct args element that contains the row and column values of matrix C that must be calculated. By multiplying the appropriate row of the matrix, A with the corresponding column of matrix B, it determines the value of the specified element in matrix C. The resulting value is kept in the appropriate matrix C element
+
+## Free_memory():
+This function named "free_memory" releases the memory allocated for matrices A, B, C1, C2, and C3, which are assumed to be square matrices of size n x k. It first frees the memory allocated for each column of the matrices and then frees the memory allocated for the rows. This is an important step to prevent memory leaks and to release the resources allocated during the program execution
