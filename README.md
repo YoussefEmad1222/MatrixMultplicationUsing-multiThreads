@@ -53,14 +53,14 @@ The traditional method of matrix multiplication involves sequential computation,
 •Uneven workload distribution among threads.__
 
 ## Matrix multiplication usign thread for each element :
-•In this approach, each thread is responsible for computing the product of a single element of the resulting matrix.__ 
-•This approach can be useful for very large matrices.__
-•it allows for parallel computation of each individual multiplication.__
-• N x K number of threads.__
-• Allows for parallel computation of each individual multiplication.__
-• Can be useful for very large matrices.__
-• Requires more complex implementation.__
-• Can result in many threads, which can lead to inefficiencies.__
+•In this approach, each thread is responsible for computing the product of a single element of the resulting matrix.\ 
+•This approach can be useful for very large matrices.\
+•it allows for parallel computation of each individual multiplication.\
+• N x K number of threads.\
+• Allows for parallel computation of each individual multiplication.\
+• Can be useful for very large matrices.\
+• Requires more complex implementation.\
+• Can result in many threads, which can lead to inefficiencies.\
 
 ## conclusion
 The size of the matrices being multiplied, the technology that is available, and the needs of the application will all have an impact on the strategy that is chosen. The conventional method might be adequate for smaller matrices, but for larger matrices, row-wise or element-wise parallelization might be required for improved performance
