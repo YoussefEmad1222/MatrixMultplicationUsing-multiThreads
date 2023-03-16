@@ -37,20 +37,20 @@ This function named "free_memory" releases the memory allocated for matrices A, 
 # comparison between the 3 types of multiplication
 
 ## Matrix multiplication:
-The traditional method of matrix multiplication involves sequential computation, where each component of the final matrix is calculated one at a time.__ 
-•This method is simple to use and understand, however it is ineffective for huge matrices.__ 
-•it use Only one thread make the matrix mutiplication.__
-•it is Simple to implement and Easy to understand.__
-•Not efficient for large matrices Computation time increases as the size of the matrix increases.__
+The traditional method of matrix multiplication involves sequential computation, where each component of the final matrix is calculated one at a time.\
+•This method is simple to use and understand, however it is ineffective for huge matrices.\
+•it use Only one thread make the matrix mutiplication.\
+•it is Simple to implement and Easy to understand.\
+•Not efficient for large matrices Computation time increases as the size of the matrix increases.\
 
 
 ## Matrix multiplication usign thread for each Row :
-•his method divides the computation of the products of each row of the first matrix with each column of the second matrix among each thread.__ 
-•This method allows for the row-wise multiplication to be computed in parallel.__
-•which can increase the performance of matrix multiplication for bigger matrices.__ 
-•it use N threads Allows for parallel computation of row-wise multiplication.__
-•Can improve performance for larger matrice Limited to the number of rows in the matrix.__ 
-•Uneven workload distribution among threads.__
+•his method divides the computation of the products of each row of the first matrix with each column of the second matrix among each thread.\
+•This method allows for the row-wise multiplication to be computed in parallel.\
+•which can increase the performance of matrix multiplication for bigger matrices.\ 
+•it use N threads Allows for parallel computation of row-wise multiplication.\
+•Can improve performance for larger matrice Limited to the number of rows in the matrix.\ 
+•Uneven workload distribution among threads.
 
 ## Matrix multiplication usign thread for each element :
 •In this approach, each thread is responsible for computing the product of a single element of the resulting matrix.\ 
@@ -60,7 +60,7 @@ The traditional method of matrix multiplication involves sequential computation,
 • Allows for parallel computation of each individual multiplication.\
 • Can be useful for very large matrices.\
 • Requires more complex implementation.\
-• Can result in many threads, which can lead to inefficiencies.\
+• Can result in many threads, which can lead to inefficiencies.
 
 ## conclusion
 The size of the matrices being multiplied, the technology that is available, and the needs of the application will all have an impact on the strategy that is chosen. The conventional method might be adequate for smaller matrices, but for larger matrices, row-wise or element-wise parallelization might be required for improved performance
